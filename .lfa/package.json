@@ -1,0 +1,14 @@
+{
+  "name": "eton-pamphlets",
+  "version": "1.0.0",
+  "keywords": [
+    "lfa-book"
+  ],
+  "book": {
+    "title": "Eton Digital Pamphlets Library",
+    "language": "en"
+  },
+  "engines": {
+    "lfa": "~0.7.0"
+  }
+}

@@ -1,0 +1,168 @@
++title('1. Statistics')
++subtitle('Statistics and numbers')
+.lfdemo-header.full.statistics
+  .title-box.dark
+    .title Statistics and numbers
+h1 Overview
+p Statistics is the study of the collection, analysis, interpretation, presentation, and organization of data. In applying statistics to, e.g., a scientific, industrial, or societal problem, it is conventional to begin with a statistical population or a statistical model process to be studied.
+.row
+  .col-sm-6
+    p Statistics rarely give a simple Yes/No type answer to the question under analysis. Interpretation often comes down to the level of statistical significance applied to the numbers and often refers to the probability of a value accurately rejecting the null hypothesis.
+  .col-sm-6
+    +lightbox('img/mathematics/p-value.png')
+p While in principle the acceptable level of statistical significance may be subject to debate, the p-value is the smallest significance level that allows the test to reject the null hypothesis.
+h4 Some GCSE level examples.
+.spacer-05
++exercise({name: 'maths-1-ex1'})
+  +statement
+    p
+      strong 1. Here are some cards.
+  .is-done-box
+  .progress-box
+  .spacer-05
+  .row
+    .col-sm-2
+      +img('img/mathematics/star.png')
+    .col-sm-2
+      +img('img/mathematics/square.png')
+    .col-sm-2
+      +img('img/mathematics/square.png')
+    .col-sm-2
+      +img('img/mathematics/triangle.png')
+    .col-sm-2
+      +img('img/mathematics/square.png')
+    .col-sm-2
+      +img('img/mathematics/star.png')
+    p A card is picked at random.
+    .spacer-02
+    +select-to-highlight
+      ol(type='a')
+        li Select the chance that the card has a square on it.
+          .row.center
+            .bad.col-sm-2
+              span impossible
+            .bad.col-sm-2
+              span unlikely
+            .bad.col-sm-2
+              span evens
+            .good.col-sm-2
+              span likely
+            .bad.col-sm-2
+              span certain
+        .spacer-05
+        li Select the chance that the card has a triangle on it.
+          .row.center
+            .bad.col-sm-2
+              span impossible
+            .good.col-sm-2
+              span unlikely
+            .bad.col-sm-2
+              span evens
+            .bad.col-sm-2
+              span likely
+            .bad.col-sm-2
+              span certain
+
+.spacer-05
++exercise({name: 'maths-1-ex2'})
+  -var subex = 'maths-1-ex2-', i = 1
+  +statement
+    p
+      strong 2.3 This table shows information about the weights of 200 rabbits.
+  .spacer-05
+  .is-done-box
+  .progress-box
+  .spacer-05
+  .row
+    .col-sm-2
+    .col-sm-8
+      .table-responsive
+        table.table-bordered.table-condensed
+          thead
+            tr
+              td Weight,
+                em w
+                |&nbsp;(grams)
+              td Frequency
+              td Midpoint
+          tbody
+            tr
+              td 60 &lt;&nbsp;
+                em w
+                |&nbsp;&le;70
+              td 101
+              td 65
+            tr
+              td 70 &lt;&nbsp;
+                em w
+                |&nbsp;&le;80
+              td 64
+              td 75
+            tr
+              td 80 &lt;&nbsp;
+                em w
+                |&nbsp;&le;90
+              td 25
+              td 85
+            tr
+              td 90 &lt;&nbsp;
+                em w
+                |&nbsp;&le;100
+              td 100
+              td 95
+    .col-sm-2
+  ol(type='a')
+    li Select wether each statement is true or false.
+      ul
+        li.row
+          .col-sm-10
+            span You can use the table to calculate the exact median.
+          .col-sm-2
+            +yesno({name: subex + i++, answer: true, yes: 'T', no: 'F'})
+        li.row
+          .col-sm-10
+            span You can use the table to work out the weight of the heaviest rabbit.
+          .col-sm-2
+            +yesno({name: subex + i++, answer: false, yes: 'T', no: 'F'})
+
+
+h1 Displaying formulas
+
+
+style.
+  p.lf-math-big > span {font-size: 170%;}
+
+p.lf-math.lf-math-big Sample 1:
+  span $$x = {-b±√{b^2-4ac}}/{2a}$$
+
+p.lf-math.lf-math-big Sample 2:
+  span $$∑↙{i=0}↖n i={n(n+1)}/2$$
+
+p.lf-math.lf-math-big Sample 3:
+  span $$\cl"ma-join-align" {\table ∫_a^b f(x) dx,={lim}↙{ε→0}∫_(a+ε)^b f(x)dx ;∫_b^∞ f(x) dx,= {lim}↙{b→∞}∫_a^b f(x)dx$$
+
+p.lf-math.lf-math-big Sample 4:
+  span \[c_n ≝ \{\, \cl"ma-join1-align" { \table A_n / { 2i } e^{ iϕn } = 1/2 (a_n - ib_n), for, n>0; 1/2 a_0, for, n=0; c^{*}_{|n|}, for, n<0}\]
+
+script.
+  require('jquery')('.lf-math').parseMath();
+
+h1 Sources from other sites
+
+h2 Geogebra
+
+p Drag points to see how the Bezier curve changes
+
+.embed-responsive.embed-responsive-16by9
+  iframe(scrolling="no",src="https://tube.geogebra.org/material/iframe/id/1803/width/1280/height/774/border//rc/false/ai/false/sdz/false/smb/false/stb/false/stbh/true/ld/false/sri/true/at/auto",style="border:0px;")
+
+p Drag the sliders so that the graph of the function overlaps the ball's trajectory. Is it a win?
+
+.embed-responsive.embed-responsive-16by9
+  iframe(scrolling="no",src="https://tube.geogebra.org/material/iframe/id/3660/border//rc/false/ai/false/sdz/false/smb/false/stb/false/stbh/true/ld/false/sri/true/at/auto",style="border:0px;")
+
+h2 Youtube , Khan Academy
+
+.embed-responsive.embed-responsive-16by9
+  iframe(frameborder='0', scrolling='no', width='1280', height='760', src='https://www.khanacademy.org/embed_video?v=JBSDQLZtjFo', allowfullscreen='', webkitallowfullscreen='', mozallowfullscreen='')
+

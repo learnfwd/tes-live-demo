@@ -1,0 +1,10 @@
+mixin footnote(text)
+  span.footnote
+    a(tabindex="0", data-trigger="hover focus", class="footnote item-popover", type="button", data-placement="auto", data-content= text)
+      block
+
+
+mixin link()
+  - var link = '#book/' + Array.prototype.slice.call(arguments).join('-');
+  a(href=link).lf-internal-link
+    block
