@@ -2,18 +2,20 @@
 +subtitle('Cover')
 
 +lfdemo-slide-contents('lfdemo-slide-cover')
-  .goto.full.teacher-visible
-    p http://tes.lfwd.io
+  #home-cover.full
+    .goto.full.teacher-visible
+      p http://tes.lfwd.io
 
-  .cover-page
-    .row
-      .col-sm-4
-        +img('img/logo-learnfwd.png')
+    .cover-page
+      .container-fluid
+        .row
+          .col-sm-4
+            +img('img/logo-learnfwd.png')
 
-      .col-sm-8
-        h1 Welcome!
-        #name-input
-        .small (That's you! Feel free to change the name)
+          .col-sm-8
+            h1 Welcome!
+              #name-input
+            .small (That's you! Feel free to change the name)
 
-        h3 Colleagues in the classroom:
-        #student-list Please wait...
+            h3 Colleagues in the classroom:
+            #student-list Please wait...
