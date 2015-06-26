@@ -3,8 +3,89 @@
 @import "jqmath"
 @import "maths"
 
-#scrollview
-  background: url('img/greyzz.png');
+highlight = #f60
+orange = #fbb03b
+green = #8cc63f
+
+html, body, article, section, #textbook
+  min-height: 100% !important
+
+body #scrollview
+  padding-bottom: 0
+  padding-top: 0
+
+@media (min-width: 900px)
+  #scrollview
+    background-color: #ddd;
+
+    padding: 1em 0;
+
+      #textbook
+        padding: 0 3em;
+
+// Slide type pages
+
+.lfdemo-slide-container
+  width: 100% !important;
+  padding: 0 !important;
+  background: url('bg/4.png') !important;
+  
+.lfdemo-slide-contents
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  margin: 0 !important;
+    
+  > h1
+    align-self: center;
+    font-size: 400%
+  .slide
+    font-size: 250%
+    align-self: center;
+
+.lfdemo-slide-notes
+  width:100%;
+  padding: 1em 3em;
+  margin: 10px auto !important;;
+  border: 1px solid #bbb;
+  background-color: #fff;
+  
+  >p
+    margin: 1.5em 0 !important;
+  
+@media (min-width: 992px)
+  .lfdemo-slide-notes
+    width: 850px;
+
+@media (min-width: 768px)
+  .lfdemo-slide-notes
+    width: 715px;
+
+//-- Custom slide styles
+
+.lfdemo-slide-green
+  background-color: #1B5E20
+  color: #fff
+
+.lfdemo-slide-indigo
+  background-color: #1A237E
+  color: #fff
+
+.lfdemo-slide-red
+  background-color: #B71C1C
+  color: #fff
+
+.lfdemo-slide-purple
+  background-color: #4A148C
+  color: #fff
+
+.lfdemo-slide-cyan
+  background-color: #006064
+  color: #fff
+
+
+
+// -- end of lfdemo
 
 #leftbar
   padding-top:0

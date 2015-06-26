@@ -4,7 +4,10 @@ mixin footnote(text)
       block
 
 
-mixin link()
-  - var link = '#book/' + Array.prototype.slice.call(arguments).join('-');
-  a(href=link).lf-internal-link
+mixin lfdemo-slide-contents(className)
+  div(class = ['lfdemo-slide-contents', className].join(' ').trim())
+    block
+
+mixin lfdemo-slide-notes
+  .lfdemo-slide-notes
     block
